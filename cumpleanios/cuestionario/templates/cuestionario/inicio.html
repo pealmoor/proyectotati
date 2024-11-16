@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+</head>
+<body>
+    <h1>¡Hola, bienvenida a tu sorpresa! 🎉</h1>
+    <p>Ingresa tu fecha de nacimiento para comenzar.</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="date" name="fecha_nacimiento" required>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores Animado</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .flower-container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+
+        /* Estilo general para la flor */
+        .flower {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: drawFlower 3s forwards;
+        }
+
+        /* Pétalos de la flor */
+        .petal {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background-color: #8A2BE2; /* Color morado */
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: petalGrow 2s ease-out forwards;
+        }
+
+        .petal:nth-child(1) {
+            transform: rotate(0deg);
+            animation-delay: 0.5s;
+        }
+
+        .petal:nth-child(2) {
+            transform: rotate(90deg);
+            animation-delay: 1s;
+        }
+
+        .petal:nth-child(3) {
+            transform: rotate(180deg);
+            animation-delay: 1.5s;
+        }
+
+        .petal:nth-child(4) {
+            transform: rotate(270deg);
+            animation-delay: 2s;
+        }
+
+        /* El centro de la flor */
+        .center {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        /* Animación para el crecimiento de los pétalos */
+        @keyframes petalGrow {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Animación para el crecimiento de la flor completa */
+        @keyframes drawFlower {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+            100% {
+                width: 80px;
+                height: 80px;
+                opacity: 1;
+            }
+        }
+
+        /* Estilo para el tallo */
+        .stem {
+            position: absolute;
+            width: 6px;
+            height: 100px;
+            background-color: #228B22; /* Color verde */
+            animation: growStem 3s forwards;
+        }
+
+        @keyframes growStem {
+            0% {
+                height: 0;
+            }
+            100% {
+                height: 100px;
+            }
+        }
+
+        /* Ubicación de cada flor */
+        .flower1 { top: 100px; left: 200px; animation-delay: 0s; }
+        .flower2 { top: 200px; left: 300px; animation-delay: 0.5s; }
+        .flower3 { top: 150px; left: 400px; animation-delay: 1s; }
+        .flower4 { top: 300px; left: 250px; animation-delay: 1.5s; }
+        .flower5 { top: 350px; left: 100px; animation-delay: 2s; }
+        .flower6 { top: 400px; left: 500px; animation-delay: 2.5s; }
+        .flower7 { top: 50px; left: 600px; animation-delay: 3s; }
+        .flower8 { top: 250px; left: 650px; animation-delay: 3.5s; }
+        .flower9 { top: 100px; left: 550px; animation-delay: 4s; }
+        .flower10 { top: 200px; left: 150px; animation-delay: 4.5s; }
+
+    </style>
+</head>
+<body>
+
+    <div class="flower-container">
+        <!-- Flor 1 -->
+        <div class="flower flower1">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 180px; left: 230px;"></div>
+
+        <!-- Flor 2 -->
+        <div class="flower flower2">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 270px; left: 320px;"></div>
+
+        <!-- Flor 3 -->
+        <div class="flower flower3">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 230px; left: 420px;"></div>
+
+        <!-- Flor 4 -->
+        <div class="flower flower4">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 380px; left: 270px;"></div>
+
+        <!-- Flor 5 -->
+        <div class="flower flower5">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 430px; left: 120px;"></div>
+
+        <!-- Flor 6 -->
+        <div class="flower flower6">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 450px; left: 520px;"></div>
+
+        <!-- Flor 7 -->
+        <div class="flower flower7">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 130px; left: 630px;"></div>
+
+        <!-- Flor 8 -->
+        <div class="flower flower8">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 320px; left: 670px;"></div>
+
+        <!-- Flor 9 -->
+        <div class="flower flower9">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 180px; left: 570px;"></div>
+
+        <!-- Flor 10 -->
+        <div class="flower flower10">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center"></div>
+        </div>
+        <div class="stem" style="top: 270px; left: 180px;"></div>
+    </div>
+
+</body>
+</html>
