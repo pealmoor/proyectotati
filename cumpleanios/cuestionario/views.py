@@ -87,10 +87,9 @@ def pregunta_5(request):
 
 
 def fin(request):
-    return redirect('ramo_floras')
+    return render(request, 'cuestionario/fin.html')
 
-def ramo_floras(request):
-    return render(request, 'myapp/ramo_floras.html')
+
 
 
 
