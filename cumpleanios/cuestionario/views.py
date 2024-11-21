@@ -12,7 +12,7 @@ def inicio(request):
             return redirect('pregunta_1')  # Redirige a la primera pregunta si la fecha es correcta
         else:
             return HttpResponse("La fecha de nacimiento es incorrecta. No eres tatis.")
-    return render(request, 'cuestionario/inicio.html')
+    return render(request, 'cuestionario/index.html')
 
 
 def pregunta_1(request):

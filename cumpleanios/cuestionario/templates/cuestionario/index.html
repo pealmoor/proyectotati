@@ -1,11 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=inicio.html">
-    <title>Redirección</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Feliz Cumpleaños</title>
+    <link rel="stylesheet" href="{% static 'cuestionario/css/style.css' %}">
 </head>
 <body>
-    <p>Si no eres redirigido automáticamente, <a href="inicio.html">haz clic aquí</a>.</p>
+    <div class="container">
+        <h1>¡Hola, bienvenida a tu sorpresa! 🎉</h1>
+        <p>Ingresa tu fecha de nacimiento para comenzar.</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="date" name="fecha_nacimiento" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
